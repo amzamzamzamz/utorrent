@@ -31,7 +31,7 @@ ADD utserver.conf /utorrent/utserver.conf
 RUN chown utorrent:utorrent /utorrent/entrypoint.sh && \
     chmod 755 /utorrent/entrypoint.sh
 
-VOLUME ["/utorrent/settings", "/utorrent/data"]
+VOLUME /utorrent/data
 EXPOSE 8080 6881
 
 WORKDIR /utorrent
